@@ -2,10 +2,22 @@ const questionText = document.getElementById('question-text');
 const maleBtn = document.getElementById('maleBtn');
 const femaleBtn = document.getElementById('femaleBtn');
 
-maleBtn.addEventListener('click', () => askNextQuestion('male'));
-femaleBtn.addEventListener('click', () => askNextQuestion('female'));
+maleBtn.addEventListener('click', () => askNextQuestion('Male'));
+femaleBtn.addEventListener('click', () => askNextQuestion('Female'));
 
 function askNextQuestion(gender) {
-    // Implement logic to ask more questions based on gender and other factors.
-    // Update questionText.innerHTML and handle user responses accordingly.
+    if (gender == 'Male') {
+        fetch('/CelebrityController/getCelebritiesByGenderMale')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
+    } else if (gender == 'Female') {
+        fetch('/CelebrityController/getCelebritiesByGenderFemale')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        });
+    }
+
 }
