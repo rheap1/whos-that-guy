@@ -41,18 +41,12 @@ function askNextQuestion(gender) {
         parentElement1.removeChild(button1);
         parentElement2.removeChild(button2);
 
-        // Get the div element by its ID
+        //set image to celebrity
         var divElement = document.getElementById("imgDiv");
-
-        // Create an img element
         var imgElement = document.createElement("img");
-
-        // Set the src attribute to the URL of the image file
         imgElement.src = "JoshHutcherson.jpeg"; 
-        imgElement.width = 300; // Set the width of the image (in pixels)
-        imgElement.height = 200; // Set the height of the image (in pixels)
-
-        // Append the img element as a child to the div element
+        imgElement.width = 300;
+        imgElement.height = 200;
         divElement.appendChild(imgElement);
     }
 }
