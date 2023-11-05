@@ -6,6 +6,10 @@ btn1.addEventListener('click', () => askNextQuestion('Male'));
 btn2.addEventListener('click', () => askNextQuestion('Female'));
 
 function askNextQuestion(gender) {
+    questionText.innerHTML = "What color is their hair?"
+    btn1.textContent = "Brown";
+    btn2.textContent = "Blonde";
+    
     if (gender == 'Male') {
         fetch('/CelebrityController/getCelebritiesByGenderMale')
         .then(response => response.json())
@@ -19,8 +23,4 @@ function askNextQuestion(gender) {
             console.log(data);
         });
     }
-
-    questionText.innerHTML = "What color is their hair?"
-    btn1.textContent = "Brown";
-    btn2.textContent = "Blonde";
 }
