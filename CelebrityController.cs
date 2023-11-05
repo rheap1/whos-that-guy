@@ -8,7 +8,7 @@ namespace WhosThatGuy.Celebrity_Classes {
 
             var result = new
             {
-                Message = "Hello from the server!",
+                Message = "Male",
                 DateTime = DateTime.Now
             };
 
@@ -21,7 +21,7 @@ namespace WhosThatGuy.Celebrity_Classes {
         {
             var result = new
             {
-                Message = "Hello from the server!",
+                Message = "Female",
                 DateTime = DateTime.Now
             };
 

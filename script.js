@@ -1,9 +1,9 @@
 const questionText = document.getElementById('question-text');
-const maleBtn = document.getElementById('maleBtn');
-const femaleBtn = document.getElementById('femaleBtn');
+const btn1 = document.getElementById('Btn1');
+const btn2 = document.getElementById('Btn2');
 
-maleBtn.addEventListener('click', () => askNextQuestion('Male'));
-femaleBtn.addEventListener('click', () => askNextQuestion('Female'));
+btn1.addEventListener('click', () => askNextQuestion('Male'));
+btn2.addEventListener('click', () => askNextQuestion('Female'));
 
 function askNextQuestion(gender) {
     if (gender == 'Male') {
@@ -20,4 +20,7 @@ function askNextQuestion(gender) {
         });
     }
 
+    questionText.innerHTML = "What color is their hair?"
+    btn1.textContent = "Brown";
+    btn2.textContent = "Blonde";
 }
